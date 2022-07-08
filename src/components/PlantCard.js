@@ -4,7 +4,7 @@ function PlantCard({plantList}) {
   const {id, name, image, price}=plantList
 
   return (
-    <li className="card">
+    <li className="card" >
       <img src={image} alt={"plant name"} />
       <h4>{name}</h4>
       <p>Price: {price}</p>

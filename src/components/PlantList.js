@@ -6,7 +6,7 @@ function PlantList({plantList}) {
     <ul className="cards">{
       plantList.map(
         (index)=>{
-         return <PlantCard plantList={index}/>
+         return <PlantCard  plantList={index} key={index.id}/>
         }
       )
       }</ul>
