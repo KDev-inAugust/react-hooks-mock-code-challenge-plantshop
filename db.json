@@ -53,6 +53,12 @@
       "image": "https://cdn.shopify.com/s/files/1/0075/1117/9353/products/PG-W-B_300x.jpg?v=1571030261",
       "price": "-0.12",
       "id": 11
+    },
+    {
+      "name": "Just another Plant",
+      "image": "https://cdn.shopify.com/s/files/1/0075/1117/9353/products/PG-W-G_300x.jpg?v=1571030261",
+      "price": "0.03",
+      "id": 12
     }
   ]
 }

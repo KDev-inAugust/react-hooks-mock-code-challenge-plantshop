@@ -6,6 +6,8 @@ import Search from "./Search";
 function PlantPage() {
 
   const [plantList, setPlantList]=useState([]);
+ 
+  
 
   useEffect(()=>{
     fetch("http://localhost:6001/plants")
@@ -33,13 +35,46 @@ function PlantPage() {
         ;
   }
 
+  //-----------the search functionality
+  
+  
+  let basedOnSearch=plantList
+  function handleSearch(value){
+    if (value===""){
+      fetch("http://localhost:6001/plants")
+      .then(res=>res.json())
+      .then(data=>setPlantList(data))
+    }
+    else {basedOnSearch = plantList.filter(
+     (index)=>index.name.includes(value)
+    )
+    setPlantList(basedOnSearch)}
+  }
+
+ 
+
   return (
     <main>
       <NewPlantForm handleAddPlantCard={handleAddPlantCard}/>
-      <Search />
+      <Search handleSearch={handleSearch}/>
       <PlantList plantList={plantList} />
     </main>
   );
 }
 
 export default PlantPage;
+
+
+// function handleSearch (value){
+//   const basedOnSearch = plantList.filter(
+//     (index)=>{
+//       if (value=false){
+//         setPlantList(plantList);
+//         console.log("1")
+//       }
+
+//       else {console.log("2"); return index.name.toLowerCase().includes(value)}
+//     }
+//   )
+//     setPlantList(basedOnSearch)
+// }
