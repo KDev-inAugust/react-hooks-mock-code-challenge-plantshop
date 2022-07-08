@@ -41,6 +41,18 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Test Plant 3",
+      "image": "https://cdn.shopify.com/s/files/1/0075/1117/9353/products/PG-C-B_300x.jpg?v=1571030261",
+      "price": "0.07",
+      "id": 10
+    },
+    {
+      "name": "Golden Something",
+      "image": "https://cdn.shopify.com/s/files/1/0075/1117/9353/products/PG-W-B_300x.jpg?v=1571030261",
+      "price": "-0.12",
+      "id": 11
     }
   ]
 }

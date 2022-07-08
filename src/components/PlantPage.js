@@ -17,7 +17,20 @@ function PlantPage() {
   //-------the add card function
 
   function handleAddPlantCard (infoForPlantToAdd){
-    setPlantList([...plantList, infoForPlantToAdd ])
+    fetch("http://localhost:6001/plants", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+       name: infoForPlantToAdd.name,
+       image: infoForPlantToAdd.image,
+      price: infoForPlantToAdd.price 
+      })
+    })
+      .then((res)=>res.json())
+      .then(data=>setPlantList([...plantList, data]))
+        ;
   }
 
   return (

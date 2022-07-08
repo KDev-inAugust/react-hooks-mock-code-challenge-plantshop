@@ -42,6 +42,7 @@ function handlePriceChange(e){
         <input onChange={handleImageChange} type="text" name="image" placeholder="Image URL" />
         <input onChange={handlePriceChange} type="number" name="price" step="0.01" placeholder="Price" />
         <button type="submit">Add Plant</button>
+        <button type="reset">Reset</button>
       </form>
     </div>
   );
