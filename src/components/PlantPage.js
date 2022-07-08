@@ -14,11 +14,17 @@ function PlantPage() {
   
   },[])
 
+  //-------the add card function
+
+  function handleAddPlantCard (infoForPlantToAdd){
+    setPlantList([...plantList, infoForPlantToAdd ])
+  }
+
   return (
     <main>
-      <NewPlantForm />
+      <NewPlantForm handleAddPlantCard={handleAddPlantCard}/>
       <Search />
-      <PlantList plantList={plantList}/>
+      <PlantList plantList={plantList} />
     </main>
   );
 }
