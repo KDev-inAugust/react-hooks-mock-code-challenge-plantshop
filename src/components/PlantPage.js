@@ -38,17 +38,19 @@ function PlantPage() {
   //-----------the search functionality
   
   
-  let basedOnSearch=plantList
+  
   function handleSearch(value){
     if (value===""){
       fetch("http://localhost:6001/plants")
       .then(res=>res.json())
       .then(data=>setPlantList(data))
     }
-    else {basedOnSearch = plantList.filter(
-     (index)=>index.name.includes(value)
+    else {let basedOnSearch = plantList.filter(
+     (index)=>index.name.toLowerCase().includes(value.toLowerCase())
     )
-    setPlantList(basedOnSearch)}
+    setPlantList(basedOnSearch); console.log(value)}
+
+    
   }
 
  

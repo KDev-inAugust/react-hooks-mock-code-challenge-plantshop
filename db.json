@@ -59,6 +59,12 @@
       "image": "https://cdn.shopify.com/s/files/1/0075/1117/9353/products/PG-W-G_300x.jpg?v=1571030261",
       "price": "0.03",
       "id": 12
+    },
+    {
+      "name": "the last test plant",
+      "image": "https://cdn.shopify.com/s/files/1/0075/1117/9353/products/B3ED87FA-545B-4617-96E4-AE9643D2B3A8_300x.jpg?v=1604891723",
+      "price": "0.16",
+      "id": 13
     }
   ]
 }
